@@ -28,6 +28,7 @@ RUN apt-get install -y strace
 RUN apt-get install -y gem
 RUN apt-get install -y pip
 RUN apt-get install -y ack-grep
+RUN apt-get install -y htop
 
 # Install language
 RUN apt-get install -y ruby
@@ -37,4 +38,4 @@ RUN apt-get install -y golang
 #ENV GOROOT /usr/local/go
 
 # Configuration files
-ADD .vimrc /
+#ADD .vimrc /
