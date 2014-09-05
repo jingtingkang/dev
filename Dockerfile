@@ -26,7 +26,7 @@ RUN apt-get install -y curl
 RUN apt-get install -y wget
 RUN apt-get install -y strace
 RUN apt-get install -y gem
-RUN apt-get install -y pip
+RUN apt-get install -y python-pip
 RUN apt-get install -y ack-grep
 RUN apt-get install -y htop
 
