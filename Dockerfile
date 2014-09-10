@@ -12,11 +12,18 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-sel
 RUN apt-get install -y oracle-java6-installer
 ENV JAVA_HOME /usr/lib/jvm/java-6-oracle/
 
+# Install language
+RUN apt-get install -y ruby
+RUN apt-get install -y python
+RUN apt-get install -y erlang
+RUN apt-get install -y golang
+#ENV GOROOT /usr/local/go
+
 # Install tools
 RUN apt-get install -y git
 RUN apt-get install -y maven
-RUN apt-get install -y emacs
-RUN apt-get install -y vim
+RUN apt-get install -y emacs # should add .emacs
+RUN apt-get install -y vim # should add .vimrc
 RUN apt-get install -y cmake
 RUN apt-get install -y build-essential
 RUN apt-get install -y tcpdump
@@ -29,13 +36,6 @@ RUN apt-get install -y gem
 RUN apt-get install -y python-pip
 RUN apt-get install -y ack-grep
 RUN apt-get install -y htop
+RUN apt-get install -y zsh # should have oh-my-zsh
 
-# Install language
-RUN apt-get install -y ruby
-RUN apt-get install -y python
-RUN apt-get install -y erlang
-RUN apt-get install -y golang
-#ENV GOROOT /usr/local/go
 
-# Configuration files
-#ADD .vimrc /
