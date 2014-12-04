@@ -1,5 +1,9 @@
-# dev-env
+# Dev Environment
 
-The dockerized development environment.
+## Introducation
 
-<https://github.com/tobegit3hub/dev-env/blob/master/Dockerfile>
+The development environemnt for me. More detail on [Dockerfile](Dockerfile).
+
+## Usage
+
+docker run -i -t --net=host --privileged -v /:/host tobegit3hub/dev
